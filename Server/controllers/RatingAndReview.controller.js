@@ -3,7 +3,7 @@ import Course from "../models/Course.js";
 import mongoose from "mongoose";
 
 //create rating and review
-export const createRatingAndReview = async (req, res) => {
+export const createRating = async (req, res) => {
   try {
     const userId = req.user.id;
 
@@ -122,7 +122,7 @@ export const getAverageRating = async (req, res) => {
 };
 
 //get all ratings and reviews
-export const getAllRatingsAndReviews = async (req, res) => {
+export const getAllRating = async (req, res) => {
   try {
     // Fetch all ratings and reviews
     const ratingsAndReviews = await RatingAndReviews.find({})

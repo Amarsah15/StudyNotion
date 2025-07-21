@@ -92,7 +92,7 @@ export const createCourse = async (req, res) => {
 };
 
 //get all courses handler function
-const getAllCourses = async (req, res) => {
+export const getAllCourses = async (req, res) => {
   try {
     const allCourses = await Course.find(
       {},
@@ -126,7 +126,7 @@ const getAllCourses = async (req, res) => {
   }
 };
 
-const getCourseDetails = async (req, res) => {
+export const getCourseDetails = async (req, res) => {
   try {
     const { courseId } = req.body;
 
